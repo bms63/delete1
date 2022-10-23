@@ -9,3 +9,4 @@ README.*
 ^cicdworkshop\.Rcheck$
 ^cicdworkshop.*\.tar\.gz$
 ^cicdworkshop.*\.tgz$
+LICENSE.*
