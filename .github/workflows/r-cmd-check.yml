@@ -11,12 +11,10 @@ on:
     branches:
       - main
       - devel
-      - pre-release
   pull_request:
     branches:
       - main
       - devel
-      - pre-release
 
 name: R CMD Check
 
@@ -56,12 +54,6 @@ jobs:
         with:
           ref: ${{ steps.branch-name.outputs.head_ref_branch }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
-
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        if: github.event_name != 'pull_request'
-        with:
-          ref: ${{ steps.branch-name.outputs.head_ref_branch }}
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
