@@ -19,7 +19,7 @@ on:
 name: R CMD Check
 
 concurrency:
-  group: r-cmd-check-${{ github.event.pull_request.number || github.ref }}
+  group: r-cmd-check-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
